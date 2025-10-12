@@ -23,6 +23,12 @@ internal class CategoryRepository
                     Title = "StackLayout",
                     Description = "Descrição sequencial dos elementos.",
                     Page = typeof(StackLayoutPage)
+                },
+                new Component
+                {
+                    Title = "Grid",
+                    Description = "Organiza os elemento dentro de uma tabela",
+                    Page = typeof(GridLayoutPage)
                 }
             }
         });
