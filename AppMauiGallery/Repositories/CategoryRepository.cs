@@ -22,7 +22,7 @@ internal class CategoryRepository
                 {
                     Title = "StackLayout",
                     Description = "Descrição sequencial dos elementos.",
-                    Page = new StackLayoutPage()
+                    Page = typeof(StackLayoutPage)
                 }
             }
         });

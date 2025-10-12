@@ -6,8 +6,9 @@
     Title="StackLayoutPage">
     <VerticalStackLayout>
         <Label
+            Margin="20"
             HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
+            Text="Página do StackLayout"
             VerticalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>
