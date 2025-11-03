@@ -3,10 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMauiGallery.Views.Layouts.FlexLayoutPage"
              Title="FlexLayoutPage">
-    <FlexLayout Direction="Column" AlignItems="Start" JustifyContent="SpaceBetween">
-        <Label Text="Linha 1" Padding="10" BackgroundColor="RosyBrown"/>
-        <Label Text="Linha 2" FlexLayout.AlignSelf="Center" Padding="10" BackgroundColor="SandyBrown"/>
-        <Label Text="Linha 3" FlexLayout.AlignSelf="End" Padding="10" BackgroundColor="SaddleBrown" TextColor="White"/>
-        <Label Text="Linha 4" FlexLayout.AlignSelf="Stretch" Padding="10" BackgroundColor="Black" TextColor="White"/>
+    <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="SpaceEvenly" AlignItems="Start" JustifyContent="Start">
+        <Label Text="Linha 1" Padding="10" FlexLayout.Order="1" FlexLayout.Grow="1" BackgroundColor="RosyBrown"/>
+        <Label Text="Linha 2" FlexLayout.AlignSelf="Center" FlexLayout.Order="0" FlexLayout.Basis="20%" Padding="10" BackgroundColor="SandyBrown"/>
+        <Label Text="Linha 3" FlexLayout.AlignSelf="End" FlexLayout.Order="3" Padding="10" BackgroundColor="SaddleBrown" TextColor="White"/>
+        <Label Text="Linha 4" FlexLayout.AlignSelf="Stretch" Padding="10" FlexLayout.Order="2" FlexLayout.Grow="1" BackgroundColor="Black" TextColor="White"/>
+        <Label Text="Linha 5"  Padding="10" BackgroundColor="Aquamarine"/>
+        <Label Text="Linha 6"  Padding="10" BackgroundColor="Aquamarine"/>
+        <Label Text="Linha 7"  Padding="10" BackgroundColor="Aquamarine"/>
+        <Label Text="Linha 8"  Padding="10" BackgroundColor="Aquamarine"/>
+        <Label Text="Linha 9"  Padding="10" FlexLayout.Shrink="0" BackgroundColor="Aquamarine"/>
     </FlexLayout>
 </ContentPage>
