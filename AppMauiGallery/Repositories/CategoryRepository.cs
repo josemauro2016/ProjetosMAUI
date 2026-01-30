@@ -1,14 +1,12 @@
 ﻿using AppMauiGallery.Models;
+using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Layouts;
 
 namespace AppMauiGallery.Repositories;
 
 internal class CategoryRepository
 {
-    public CategoryRepository()
-    {
-      
-    }
+    public CategoryRepository() { }
     
     public List<Category> GetCategories()
     {
@@ -43,6 +41,26 @@ internal class CategoryRepository
                     Page = typeof(FlexLayoutPage)
                 },
 
+            }
+        });
+
+        categories.Add(new Category
+        {
+            Name = "Componentes (Views)",
+            Components = new List<Component>
+            {
+                new Component
+                {
+                    Title = "BoxView",
+                    Description = "Um elemento que cria uma caixa para ser apresentada",
+                    Page = typeof(BoxViewPage)
+                },
+                new Component
+                {
+                    Title = "Label",
+                    Description = "Apresenta o texto na tela",
+                    Page = typeof(LabelPage)
+                }
             }
         });
 
