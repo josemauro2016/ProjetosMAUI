@@ -17,6 +17,35 @@
                FontAttributes="Italic"
                FontFamily="OpenSansSemibold"
                Padding="10"/>
+
+        <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+               MaxLines="2"
+               LineHeight="1.5"
+               LineBreakMode="TailTruncation"
+               />
+
+        <Label Padding="10">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Lorem Ipsum" TextDecorations="Underline" TextColor="Blue" FontAttributes="Bold">
+                        <Span.GestureRecognizers>
+                            
+                        </Span.GestureRecognizers>
+                    </Span>
+                    <Span Text=" is simply dummy text of the printing"  FontAttributes="Italic"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Text=".NET MAUI" 
+               BackgroundColor="#F2F2F2" 
+               HorizontalTextAlignment="Center" 
+               HeightRequest="150" 
+               VerticalTextAlignment="Center"
+               Padding="10" 
+               FontSize="20" 
+               FontAttributes="Bold" />
+
         <Label Text="HTML" BackgroundColor="Gray" Padding="10" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Label>
         <Label 
             Padding="10"
