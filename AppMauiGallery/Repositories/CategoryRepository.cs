@@ -66,6 +66,12 @@ internal class CategoryRepository
                     Title = "Button",
                     Description = "Apresenta um botão na tela.",
                     Page = typeof(ButtonPage)
+                },
+                new Component
+                {
+                    Title = "Image",
+                    Description = "Apresenta uma Imagem na tela.",
+                    Page = typeof(ImagePage)
                 }
             }
         });
