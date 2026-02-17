@@ -22,39 +22,49 @@
                 FontSize="36"
                 HorizontalOptions="Center"/>
             <VerticalStackLayout>
-                <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="3" HorizontalOptions="Center">
                     <Button
+                        BorderWidth="2"
                         Text="Q" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="W" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="E" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="R" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="T" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="Y" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="U" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="I" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="O" 
                         HorizontalOptions="Center"/>
                     <Button
+                        BorderWidth="2"
                         Text="P" 
                         HorizontalOptions="Center"/>
                 </HorizontalStackLayout>
-                <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="3" HorizontalOptions="Center">
                     <Button
                         Text="A" 
                         HorizontalOptions="Center"/>
@@ -80,7 +90,7 @@
                         Text="L" 
                         HorizontalOptions="Center"/>
                 </HorizontalStackLayout>
-                <HorizontalStackLayout Margin="0, 0, 0, 10" HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="3" Margin="0, 0, 0, 10" HorizontalOptions="Center">
                     <Button
                         Text="Z" 
                         HorizontalOptions="Center"/>
