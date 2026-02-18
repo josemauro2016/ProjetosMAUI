@@ -1,25 +1,86 @@
-﻿namespace AppJogoForca
+﻿using AppJogoForca.Libraries.Text;
+using AppJogoForca.Models;
+using AppJogoForca.Repositories;
+using System.Threading.Tasks;
+
+namespace AppJogoForca
 {
     public partial class MainPage : ContentPage
     {
-        //int count = 0;
-
+        private Word _word;
+        private int _errors;
         public MainPage()
         {
             InitializeComponent();
+
+            ResetScreen();
+        }
+        
+        private async void OnButtonClick(object sender, EventArgs e)
+        {
+            ((Button)sender).IsEnabled = false;
+            String letter = ((Button)sender).Text;
+
+            var positions = _word.Text.GetPositions(letter);
+
+            if (positions.Count == 0)
+            {
+                _errors++;
+
+                ImgMain.Source = ImageSource.FromFile($"forca{_errors + 1}.png");
+
+                if(_errors == 6)
+                {
+                    await DisplayAlert("Perdeu!", "Já tá enforcado", "Novo Jogo");
+                    ResetScreen();
+                }
+                return;
+            }
+
+            foreach ( var position in positions )
+            {
+                LblText.Text = LblText.Text.Remove(position, 1).Insert(position, letter);
+            }
         }
 
-        /*private void OnCounterClicked(object sender, EventArgs e)
+        private void ResetScreen()
         {
-            count++;
+            ResetVirtualKeyboard();
+            ResetErrors();
+            GenerateNewWord();
+            
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        private void GenerateNewWord()
+        {
+            var repository = new WordRepositories();
+            _word = repository.GetRandomWord();
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }*/
+            LblTips.Text = _word.Tips;
+            LblText.Text = new String('_', _word.Text.Length);
+        }
+
+        private void ResetErrors()
+        {
+            _errors = 0;
+            ImgMain.Source = ImageSource.FromFile("forca1.png");
+        }
+        private void ResetVirtualKeyboard()
+        {
+            ResetVirtualLines((HorizontalStackLayout)KeyBoardContainer.Children[0]);
+            ResetVirtualLines((HorizontalStackLayout)KeyBoardContainer.Children[1]);
+            ResetVirtualLines((HorizontalStackLayout)KeyBoardContainer.Children[2]);
+            
+           
+        }
+
+        private void ResetVirtualLines(HorizontalStackLayout horizontal)
+        {
+            foreach(Button button in horizontal.Children)
+            {
+                button.IsEnabled = true;
+            }
+        }
     }
 
 }
