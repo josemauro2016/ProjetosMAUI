@@ -86,6 +86,10 @@
                         HorizontalOptions="Center"
                         Clicked="OnButtonClick"/>
                     <Button
+                        Text="G" 
+                        HorizontalOptions="Center"
+                        Clicked="OnButtonClick"/>
+                    <Button
                         Text="H" 
                         HorizontalOptions="Center"
                         Clicked="OnButtonClick"/>
