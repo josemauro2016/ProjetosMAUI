@@ -1,5 +1,6 @@
 ﻿using AppMauiGallery.Models;
 using AppMauiGallery.Views.Components.Mains;
+using AppMauiGallery.Views.Components.Visuals;
 using AppMauiGallery.Views.Layouts;
 
 namespace AppMauiGallery.Repositories;
@@ -78,6 +79,25 @@ internal class CategoryRepository
                     Title = "ImageButton",
                     Description = "Apresenta uma Imagem com comportamento de botão.",
                     Page = typeof(ImageButtonPage)
+                },
+            }
+        });
+
+        categories.Add(new Category
+        {
+            Name = "Visuais",
+            Components = new List<Component> { 
+                new Component
+                {
+                    Title = "Frame",
+                    Description = "Caixa que envolve outros elementos",
+                    Page = typeof(FramePage)
+                },
+                new Component
+                {
+                    Title = "Border",
+                    Description = "Caixa que envolve outros elementos",
+                    Page = typeof(BorderPage)
                 },
             }
         });
