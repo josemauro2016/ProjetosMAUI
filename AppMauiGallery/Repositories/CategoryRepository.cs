@@ -1,4 +1,5 @@
 ﻿using AppMauiGallery.Models;
+using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuals;
 using AppMauiGallery.Views.Layouts;
@@ -99,6 +100,25 @@ internal class CategoryRepository
                     Description = "Caixa que envolve outros elementos",
                     Page = typeof(BorderPage)
                 },
+                new Component
+                {
+                    Title = "Shadow",
+                    Description = "Adiciona uma sombra ao elemento",
+                    Page = typeof(ShadowPage)
+                },
+            }
+        });
+        categories.Add(new Category
+        {
+            Name = "Formulários",
+            Components = new List<Component>
+            {
+                new Component
+                {
+                    Title = "Entry",
+                    Description = "Cria uma caixa de entrada de texto",
+                    Page= typeof(EntryPage)
+                }
             }
         });
 
