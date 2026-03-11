@@ -137,6 +137,24 @@ internal class CategoryRepository
                     Description = "Cria uma caixa de marcação de escolha única.",
                     Page= typeof(RadioButtonPage)
                 },
+                new Component
+                {
+                    Title = "Switch",
+                    Description = "Caixa para determinar estado booleano.",
+                    Page= typeof(SwitchPage)
+                },
+                new Component
+                {
+                    Title = "Stepper",
+                    Description = "Incrementa ou decrementa um número.",
+                    Page= typeof(StepperPage)
+                },
+                new Component
+                {
+                    Title = "Slider",
+                    Description = "Barra que incrementa ou decrementa um número.",
+                    Page= typeof(SliderPage)
+                },
             }
         });
 
