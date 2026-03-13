@@ -155,6 +155,24 @@ internal class CategoryRepository
                     Description = "Barra que incrementa ou decrementa um número.",
                     Page= typeof(SliderPage)
                 },
+                new Component
+                {
+                    Title = "TimePicker",
+                    Description = "Seleção das horas e dos minutos.",
+                    Page= typeof(TimePickerPage)
+                },
+                new Component
+                {
+                    Title = "DatePicker",
+                    Description = "Seleção de data.",
+                    Page= typeof(DatePickerPage)
+                },
+                new Component
+                {
+                    Title = "SearchBar",
+                    Description = "Campo de entrada de texto para pesquisa.",
+                    Page= typeof(SearchBarPage)
+                },
             }
         });
 
