@@ -173,6 +173,12 @@ internal class CategoryRepository
                     Description = "Campo de entrada de texto para pesquisa.",
                     Page= typeof(SearchBarPage)
                 },
+                new Component
+                {
+                    Title = "Picker",
+                    Description = "Selecionar um item da lista.",
+                    Page= typeof(PickerPage)
+                },
             }
         });
 
