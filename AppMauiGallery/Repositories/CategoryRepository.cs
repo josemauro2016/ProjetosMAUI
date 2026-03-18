@@ -1,4 +1,5 @@
 ﻿using AppMauiGallery.Models;
+using AppMauiGallery.Views.Cells;
 using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuals;
@@ -178,6 +179,20 @@ internal class CategoryRepository
                     Title = "Picker",
                     Description = "Selecionar um item da lista.",
                     Page= typeof(PickerPage)
+                },
+            }
+        });
+
+        categories.Add(new Category
+        {
+            Name = "Celulas",
+            Components = new List<Component> 
+            { 
+                new Component
+                {
+                    Title = "TextCell",
+                    Description = "Apresenta até duas labels onde uma é destinada ao titulo e outra  a descrição",
+                    Page= typeof(TextCellPage)
                 },
             }
         });
