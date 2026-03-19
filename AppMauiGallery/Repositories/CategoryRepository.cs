@@ -191,8 +191,14 @@ internal class CategoryRepository
                 new Component
                 {
                     Title = "TextCell",
-                    Description = "Apresenta até duas labels onde uma é destinada ao titulo e outra  a descrição",
+                    Description = "Apresenta até duas labels onde uma é destinada ao titulo e outra a descrição",
                     Page= typeof(TextCellPage)
+                },
+                new Component
+                {
+                    Title = "ImageCell",
+                    Description = "Apresenta uma imagem com duas labels onde uma é destinada ao titulo e outra a descrição",
+                    Page= typeof(ImageCellPage)
                 },
             }
         });
