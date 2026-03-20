@@ -200,6 +200,18 @@ internal class CategoryRepository
                     Description = "Apresenta uma imagem com duas labels onde uma é destinada ao titulo e outra a descrição",
                     Page= typeof(ImageCellPage)
                 },
+                new Component
+                {
+                    Title = "SwitchCell",
+                    Description = "Apresenta um rótulo em conjunto com uma chave.",
+                    Page= typeof(SwitchCellPage)
+                },
+                new Component
+                {
+                    Title = "EntyCell",
+                    Description = "Apresenta um rótulo em conjunto com um campo de texto.",
+                    Page= typeof(EntryCellPage)
+                },
             }
         });
 
