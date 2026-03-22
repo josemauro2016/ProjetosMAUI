@@ -212,6 +212,12 @@ internal class CategoryRepository
                     Description = "Apresenta um rótulo em conjunto com um campo de texto.",
                     Page= typeof(EntryCellPage)
                 },
+                new Component
+                {
+                    Title = "ViewCell",
+                    Description = "Permite criar a nossa celula com layout personalizado.",
+                    Page= typeof(ViewCellPage)
+                },
             }
         });
 
