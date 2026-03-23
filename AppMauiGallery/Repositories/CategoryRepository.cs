@@ -4,6 +4,7 @@ using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuals;
 using AppMauiGallery.Views.Layouts;
+using AppMauiGallery.Views.Lists;
 
 namespace AppMauiGallery.Repositories;
 
@@ -217,6 +218,20 @@ internal class CategoryRepository
                     Title = "ViewCell",
                     Description = "Permite criar a nossa celula com layout personalizado.",
                     Page= typeof(ViewCellPage)
+                },
+            }
+        });
+
+        categories.Add(new Category 
+        { 
+            Name = "Listas e Coleções",
+            Components = new List<Component> 
+            { 
+                new Component
+                {
+                    Title = "TableView",
+                    Description = "Apresenta células em linhas separadas e permite agrupar por seção",
+                    Page = typeof(TableViewPage)
                 },
             }
         });
