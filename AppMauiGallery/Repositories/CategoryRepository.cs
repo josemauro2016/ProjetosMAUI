@@ -233,6 +233,12 @@ internal class CategoryRepository
                     Description = "Apresenta células em linhas separadas e permite agrupar por seção",
                     Page = typeof(TableViewPage)
                 },
+                new Component
+                {
+                    Title = "Picker",
+                    Description = "Apresenta uma lista de seleção única.",
+                    Page = typeof(PickerListPage)
+                },
             }
         });
 
