@@ -4,7 +4,10 @@
              x:Class="AppMauiGallery.Views.Lists.PickerListPage"
              Title="PickerListPage">
     <VerticalStackLayout>
-        <Picker x:Name="PickerControl" Title="Filmes"/>
+        <Picker 
+            x:Name="PickerControl" 
+            Title="Filmes" 
+            ItemDisplayBinding="{Binding Name}"/>
 
         <Button Text="Carregar" Clicked="Button_Clicked"/>
     </VerticalStackLayout>
