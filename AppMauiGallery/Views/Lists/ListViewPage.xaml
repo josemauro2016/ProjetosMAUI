@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Lists.ListViewPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ListViewPage">
+    <ListView x:Name="ListViewControl">
+        <ListView.Header>
+            <Button Text="Carregar" Clicked="Button_Clicked"/>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold"/>
+                        <Label Text="{Binding Description}" TextColor="Gray"/>
+
+
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding LaunchYear}" Margin="10"/>
+                            <Label Text="{Binding Duration}" Margin="10"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
