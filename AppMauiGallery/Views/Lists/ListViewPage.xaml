@@ -4,7 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="ListViewPage">
-    <ListView x:Name="ListViewControl">
+    <ListView 
+        x:Name="ListViewControl" 
+        SelectionMode="Single" 
+        ItemSelected="ListViewControl_ItemSelected"
+        SeparatorColor="Blue"
+        SeparatorVisibility="Default"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True"
+        Refreshing="ListViewControl_Refreshing"
+        >
         <ListView.Header>
             <Button Text="Carregar" Clicked="Button_Clicked"/>
         </ListView.Header>
