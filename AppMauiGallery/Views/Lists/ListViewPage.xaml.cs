@@ -14,7 +14,7 @@ public partial class ListViewPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        ListViewControl.ItemsSource = MovieList.GetList().Take(2);
+        ListViewControl.ItemsSource = MovieList.GetGroupList().Take(2);
     }
 
     private void ListViewControl_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -28,7 +28,7 @@ public partial class ListViewPage : ContentPage
     {
         ListViewControl.IsRefreshing = true;
         await Task.Delay(3000);
-        ListViewControl.ItemsSource = MovieList.GetList();
+        ListViewControl.ItemsSource = MovieList.GetGroupList();
 
         ListViewControl.IsRefreshing = false;
     }

@@ -13,10 +13,25 @@
         HasUnevenRows="True"
         IsPullToRefreshEnabled="True"
         Refreshing="ListViewControl_Refreshing"
+        
+        IsGroupingEnabled="True"
         >
         <ListView.Header>
             <Button Text="Carregar" Clicked="Button_Clicked"/>
         </ListView.Header>
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <VerticalStackLayout Padding="10" BackgroundColor="Purple">
+                        <Label 
+                            TextColor="White"
+                            Margin="10"
+                            FontAttributes="Bold"
+                            Text="{Binding CompanyName}"/>
+                    </VerticalStackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
