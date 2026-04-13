@@ -1,13 +1,50 @@
 using AppMauiGallery.Views.Lists.Models;
+using System.Collections.ObjectModel;
+
 
 namespace AppMauiGallery.Views.Lists;
 
 public partial class CollectionViewPage : ContentPage
 {
+
+	ObservableCollection<Movie> movies = new ObservableCollection<Movie>();
+	int countMovies = 0;
+
 	public CollectionViewPage()
 	{
 		InitializeComponent();
 
-		CollectionViewControl.ItemsSource = MovieList.GetList().Take(5);
+		AddTenMovies();
+		CollectionViewControl.ItemsSource = MovieList.GetGroupList();
+	}
+
+    private async void RefreshView_Refreshing(object sender, EventArgs e)
+    {
+		((RefreshView)sender).IsRefreshing = true;
+		await Task.Delay(3000);
+		CollectionViewControl.ItemsSource = MovieList.GetList();
+
+		((RefreshView)sender).IsRefreshing = true;
+    }
+
+    private void CollectionViewControl_RemainingItemsThresholdReached(object sender, EventArgs e)
+    {
+		AddTenMovies();
+	}
+
+	private void AddTenMovies()
+	{
+		for(int i =0; i < 20; i++)
+		{
+			Movie movie = new Movie()
+			{
+				Id = countMovies++,
+				Name = $"Movie {countMovies}",
+				Description = $"Description {countMovies}",
+				LaunchYear = 2022,
+				Duration = new TimeSpan(2, 0, 0),
+			};
+			movies.Add(movie);
+		}
 	}
 }

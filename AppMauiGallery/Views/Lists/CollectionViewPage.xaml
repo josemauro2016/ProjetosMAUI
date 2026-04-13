@@ -3,19 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMauiGallery.Views.Lists.CollectionViewPage"
              Title="CollectionViewPage">
-    <CollectionView x:Name="CollectionViewControl">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <VerticalStackLayout Padding="10">
-                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16"/>
-                    <Label Text="{Binding Description}" TextColor="Gray"/>
-                    <HorizontalStackLayout>
-                        <Label Text="{Binding LounchYear}" Margin="10"/>
-                        <Label Text="{Binding Duration}" Margin="10"/>
+    <RefreshView RefreshColor="Purple" Refreshing="RefreshView_Refreshing">
+        <CollectionView 
+            x:Name="CollectionViewControl" 
+            RemainingItemsThreshold="-1" 
+            RemainingItemsThresholdReached="CollectionViewControl_RemainingItemsThresholdReached"
+            IsGrouped="True">
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Padding="10" BackgroundColor="LightGray">
+                        <Label Text="Inicio " />
+                        <Label Text="{Binding CompanyName}"/>
                     </HorizontalStackLayout>
-                    <BoxView HeightRequest="1" Color="LightGray"/>
-                </VerticalStackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10">
+                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16"/>
+                        <Label Text="{Binding Description}" TextColor="Gray"/>
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding LounchYear}" Margin="10"/>
+                            <Label Text="{Binding Duration}" Margin="10"/>
+                        </HorizontalStackLayout>
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.GroupFooterTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Padding="10" BackgroundColor="#F2F2F2">
+                        <Label Text="Final " />
+                        <Label Text="{Binding CompanyName}"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>
+        </CollectionView>
+    </RefreshView>
 </ContentPage>
