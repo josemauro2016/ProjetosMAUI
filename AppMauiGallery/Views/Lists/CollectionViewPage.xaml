@@ -5,14 +5,27 @@
              Title="CollectionViewPage">
     <RefreshView RefreshColor="Purple" Refreshing="RefreshView_Refreshing">
         <CollectionView 
-            x:Name="CollectionViewControl" 
+            x:Name="CollectionViewControl"
             RemainingItemsThreshold="-1" 
             RemainingItemsThresholdReached="CollectionViewControl_RemainingItemsThresholdReached"
-            IsGrouped="True">
+            IsGrouped="True"
+            SelectionMode="Multiple"
+            SelectionChanged="CollectionViewControl_SelectionChanged"
+            >
+            <CollectionView.Header>
+                <Label x:Name="LblSelectedMovies"/>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    HorizontalItemSpacing="30"
+                    VerticalItemSpacing="10"
+                    Orientation="Vertical"
+                    Span="2"/>
+            </CollectionView.ItemsLayout>
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate>
                     <HorizontalStackLayout Padding="10" BackgroundColor="LightGray">
-                        <Label Text="Inicio " />
+                        <Label Text="Inicio - " />
                         <Label Text="{Binding CompanyName}"/>
                     </HorizontalStackLayout>
                 </DataTemplate>
@@ -33,7 +46,7 @@
             <CollectionView.GroupFooterTemplate>
                 <DataTemplate>
                     <HorizontalStackLayout Padding="10" BackgroundColor="#F2F2F2">
-                        <Label Text="Final " />
+                        <Label Text="Final - " />
                         <Label Text="{Binding CompanyName}"/>
                     </HorizontalStackLayout>
                 </DataTemplate>
