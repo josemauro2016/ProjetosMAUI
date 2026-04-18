@@ -251,6 +251,12 @@ internal class CategoryRepository
                     Description = "Apresenta uma lista de itens.",
                     Page = typeof(CollectionViewPage)
                 },
+                new Component
+                {
+                    Title = "CarousellView",
+                    Description = "Apresenta uma lista de itens horizontais ou navegação lateral.",
+                    Page = typeof(CarouselViewPage)
+                },
             }
         });
 
